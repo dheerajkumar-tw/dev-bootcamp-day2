@@ -2,7 +2,7 @@ package org.bootcamp;
 
 import java.util.Objects;
 
-public class Centimeter {
+public class Meter {
 
     private Double value;
 
@@ -10,28 +10,29 @@ public class Centimeter {
         return value;
     }
 
-    public Centimeter(Double value){
+    public Meter(Double value){
         this.value = value;
     }
 
-    public String compare(Centimeter centimeter) {
-        if(this.equals(centimeter)){
+    public String compare(Meter meter) {
+        if(this.equals(meter)){
             return "Same";
         }
         return "Not Same";
     }
 
-    public String equal(Centimeter centimeter) {
-        if(Objects.equals(this.value, centimeter.value)){
+    public String equal(Meter meter) {
+        if(Objects.equals(this.value, meter.value)){
             return "Equal";
         }
         return "Not Equal";
     }
 
-    public String equal(Meter meter) {
-        if(Objects.equals(this.value*100, meter.getValue())){
+    public String equal(Centimeter centimeter) {
+        if(Objects.equals(this.value, centimeter.getValue()*100)){
             return "Equal";
         }
         return "Not Equal";
     }
+
 }
