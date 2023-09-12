@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CentimeterTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-09-12T04:57:43" hostname="Dheerajs-MacBook-Pro.local" time="0.013">
+  <properties/>
+  <testcase name="shouldReturnNotSameWhenSameObjectCompared()" classname="CentimeterTest" time="0.007"/>
+  <testcase name="shouldReturnSameWhenSameObjectCompared()" classname="CentimeterTest" time="0.0"/>
+  <testcase name="shouldReturnEqualWhenEqualValueObjectsAreCompared()" classname="CentimeterTest" time="0.001"/>
+  <testcase name="shouldReturnNotEqualWhenDifferentValueObjectsAreCompared()" classname="CentimeterTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
