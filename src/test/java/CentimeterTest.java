@@ -46,7 +46,7 @@ public class CentimeterTest {
         Double meterLength = 100.0;
         Centimeter centimeter = new Centimeter(centimeterLength);
         Meter meter = new Meter(meterLength);
-        assertTrue(centimeter.equal(meter));
+        assertTrue(centimeter.equals(meter));
     }
 
 

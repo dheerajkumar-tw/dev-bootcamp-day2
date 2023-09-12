@@ -14,8 +14,19 @@ public class Meter {
         this.value = value;
     }
 
-    public boolean equal(Centimeter centimeter) {
-        return Objects.equals(this.value, centimeter.getValue()*100) ;
+    @Override
+    public boolean equals(Object object2){
+        if(this == object2) {
+            return true;
+        }
+        if(object2 instanceof Meter){
+            Meter meter = (Meter) object2;
+            return Objects.equals(this.value, meter.getValue());
+        }else if(object2 instanceof Centimeter){
+            Centimeter centimeter = (Centimeter) object2;
+            return Objects.equals(this.value, centimeter.getValue()*100);
+        }
+        return false;
     }
 
 }
