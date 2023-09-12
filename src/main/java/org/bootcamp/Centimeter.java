@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Centimeter {
 
-    private Double value;
+    private final Double value;
 
     public Double getValue(){
         return value;
@@ -14,24 +14,20 @@ public class Centimeter {
         this.value = value;
     }
 
-    public String compare(Centimeter centimeter) {
-        if(this.equals(centimeter)){
-            return "Same";
+    @Override
+    public boolean equals(Object object2){
+        if(this == object2){
+            return true;
         }
-        return "Not Same";
+        if(!(object2 instanceof Centimeter)) return false;
+        Centimeter centimeter = (Centimeter) object2;
+        return Objects.equals(this.value, centimeter.value);
+    }
+    public boolean isSame(Centimeter centimeter) {
+        return this == centimeter;
     }
 
-    public String equal(Centimeter centimeter) {
-        if(Objects.equals(this.value, centimeter.value)){
-            return "Equal";
-        }
-        return "Not Equal";
-    }
-
-    public String equal(Meter meter) {
-        if(Objects.equals(this.value*100, meter.getValue())){
-            return "Equal";
-        }
-        return "Not Equal";
+    public boolean equal(Meter meter) {
+       return Objects.equals(this.value*100, meter.getValue());
     }
 }

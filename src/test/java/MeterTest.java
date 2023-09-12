@@ -3,6 +3,7 @@ import org.bootcamp.Meter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MeterTest {
 
@@ -12,7 +13,6 @@ public class MeterTest {
         Double meterLength = 100.0;
         Centimeter centimeter = new Centimeter(centimeterLength);
         Meter meter = new Meter(meterLength);
-        String result = "Equal";
-        assertEquals(result, meter.equal(centimeter));
+        assertTrue(meter.equal(centimeter));
     }
 }

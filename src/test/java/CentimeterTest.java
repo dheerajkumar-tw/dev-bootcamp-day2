@@ -2,7 +2,7 @@ import org.bootcamp.Centimeter;
 import org.bootcamp.Meter;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CentimeterTest {
 
@@ -11,10 +11,7 @@ public class CentimeterTest {
         Double centimeterLength = 1.0;
 
         Centimeter centimeter = new Centimeter(centimeterLength);
-
-        String result = "Same";
-        assertEquals(result, centimeter.compare(centimeter));
-    }
+        assertTrue(centimeter.isSame(centimeter));    }
 
     @Test
     public void shouldReturnNotSameWhenSameObjectCompared(){
@@ -22,8 +19,7 @@ public class CentimeterTest {
 
         Centimeter centimeter1 = new Centimeter(centimeterLength);
         Centimeter centimeter2 = new Centimeter(centimeterLength);
-        String result = "Not Same";
-        assertEquals(result, centimeter1.compare(centimeter2));
+        assertFalse(centimeter1.isSame(centimeter2));
     }
 
     @Test
@@ -32,8 +28,7 @@ public class CentimeterTest {
 
         Centimeter centimeter1 = new Centimeter(centimeterLength);
         Centimeter centimeter2 = new Centimeter(centimeterLength);
-        String result = "Equal";
-        assertEquals(result, centimeter1.equal(centimeter2));
+        assertTrue(centimeter2.equals(centimeter1));
     }
 
     @Test
@@ -42,8 +37,7 @@ public class CentimeterTest {
         Double centimeterLength2 = 2.0;
         Centimeter centimeter1 = new Centimeter(centimeterLength1);
         Centimeter centimeter2 = new Centimeter(centimeterLength2);
-        String result = "Not Equal";
-        assertEquals(result, centimeter1.equal(centimeter2));
+        assertFalse(centimeter1.equals(centimeter2));
     }
 
     @Test
@@ -52,8 +46,7 @@ public class CentimeterTest {
         Double meterLength = 100.0;
         Centimeter centimeter = new Centimeter(centimeterLength);
         Meter meter = new Meter(meterLength);
-        String result = "Equal";
-        assertEquals(result, centimeter.equal(meter));
+        assertTrue(centimeter.equal(meter));
     }
 
 
