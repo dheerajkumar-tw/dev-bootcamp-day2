@@ -21,7 +21,7 @@ public class Centimeter {
         }
         if(object2 instanceof Meter){
             Meter meter = (Meter) object2;
-            return Objects.equals(this.value*100, meter.getValue());
+            return Objects.equals(this.value * 100, meter.getValue());
         }else if(object2 instanceof Centimeter){
             Centimeter centimeter = (Centimeter) object2;
             return Objects.equals(this.value, centimeter.value);
